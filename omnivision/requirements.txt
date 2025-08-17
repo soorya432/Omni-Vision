@@ -1,0 +1,38 @@
+# Core
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# YOLOv8 (Ultralytics)
+ultralytics>=8.0.196
+
+# Image Processing
+opencv-python>=4.8.0
+pillow>=10.0.0
+
+# GUI
+tkintertable>=1.3.3
+ttkthemes>=3.2.2
+customtkinter>=5.2.0
+
+# Utilities
+numpy>=1.26.0
+pandas>=2.1.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# OCR 
+pytesseract>=0.3.10
+
+# NLP + Multimodal
+transformers>=4.40.0
+sentencepiece>=0.2.0
+scikit-learn>=1.5.0
+
+# Logging / Export
+pyyaml>=6.0.1
+tqdm>=4.66.0
+reportlab>=4.0.8
+
+# Optional (patch utilities / helpers)
+rich>=13.7.0

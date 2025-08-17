@@ -1,0 +1,44 @@
+import os, sys
+sys.path.insert(0, os.path.dirname(__file__))
+
+import argparse, json, sys
+from pathlib import Path
+from config import YOLO_MODEL, YOLO_CONF, OCR_LANGS, PROJECT_ROOT
+from models.detector import Detector
+from models.ocr import OCR
+from brain.reasoner import answer
+from utils.vis import draw_detections
+
+def main():
+    p = argparse.ArgumentParser(description="OmniVision v0.1")
+    p.add_argument("--image", required=True, help="Path to image")
+    p.add_argument("--question", required=True, help="Your question about the image")
+    p.add_argument("--device", default=None, help='Force device: "cuda" or "cpu"')
+    args = p.parse_args()
+
+    outputs_dir = PROJECT_ROOT / "outputs"
+    outputs_dir.mkdir(parents=True, exist_ok=True)
+
+    det = Detector(model_name=YOLO_MODEL, conf=YOLO_CONF, device=args.device)
+    ocr = OCR(langs=OCR_LANGS)
+
+    detections = det.detect(args.image)
+    ocr_results = ocr.read(args.image)
+    final_answer = answer(args.question, detections, ocr_results)
+
+    annotated_path = str(outputs_dir / "annotated.jpg")
+    draw_detections(args.image, detections, annotated_path)
+
+    result = {
+        "question": args.question,
+        "answer": final_answer,
+        "trace": {
+            "detections": detections,
+            "ocr": ocr_results,
+            "artifacts": { "annotated_image": annotated_path }
+        }
+    }
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,36 @@
+OmniVision Evaluation License v1.0
+
+Copyright (c) 2025 Soorya Kiran. All rights reserved.
+
+1. Grant of Rights
+Subject to this License, you may:
+- Download, install, and run the Software for personal evaluation and testing.
+- Use the Software to produce screenshots and short clips for bug reports, academic demos, or reviews, provided you credit “OmniVision by Soorya Kiran” and link to the project page.
+
+2. Restrictions
+You may not:
+- Copy, fork, modify, translate, reverse engineer, or create derivative works of the Software or any part of it (including models, weights, datasets, or code).
+- Redistribute, publish, sublicense, sell, rent, host, or provide the Software (or access to it) to any third party.
+- Use in production, commercial, or client-facing settings, or for any revenue-generating or internal business operations.
+- Train, fine-tune, or extract models, embeddings, datasets, prompts, or weights derived from the Software or its outputs (“Derivative AI Artifacts”).
+- Benchmark for marketing without prior written permission; private benchmarking for evaluation is permitted.
+
+3. Feedback
+You may provide feedback, bug reports, or suggestions. By doing so, you grant the Licensor a non-exclusive, worldwide, irrevocable, royalty-free license to use and incorporate that feedback.
+
+4. Ownership
+The Software is licensed, not sold. All rights not expressly granted are reserved by the Licensor.
+
+5. Term & Termination
+This License terminates automatically if you breach it. Upon termination, you must stop using the Software and delete all copies and Derivative AI Artifacts. Sections 2–8 survive termination.
+
+6. No Warranties
+The Software is provided “AS IS” without warranties of any kind.
+
+7. Limitation of Liability
+To the maximum extent permitted by law, the Licensor is not liable for any damages arising from use of the Software.
+
+8. Governing Law
+This License is governed by the laws of India, with venue in Tamil Nadu, unless otherwise required by applicable law.
+
+Contact: soorykiranrocks@gmail.com
